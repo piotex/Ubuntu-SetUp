@@ -2,7 +2,8 @@
 ...
 # Guest Tools
 1) Devices > Insert Guest Additions CD image
-2) Pop up window > Run > 
+2) Pop up window > Run
+3) CD Icon > [Right click on autorun.sh] > Run as software > insert acount pwd 
 
 # Copy Paste Error:
 sudo killall VBoxClient <br/>
