@@ -20,3 +20,8 @@ rm -f packages.microsoft.gpg            <br/>
 sudo apt install apt-transport-https            <br/>
 sudo apt update            <br/>
 sudo apt install code # or code-insiders            <br/>
+
+# Install pyharm
+sudo snap install pycharm-community --classic
+
+# 
