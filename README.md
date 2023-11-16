@@ -4,23 +4,33 @@
 1) Devices > Insert Guest Additions CD image
 2) Pop up window > Run
 3) CD Icon > open in terminal
-4) apt-get update
-5) sudo apt-get install gcc perl make
-6) ./autorun.sh .
+```
+apt-get update
+sudo apt-get install gcc perl make
+./autorun.sh .
+```
 
 # Copy Paste Error:
-sudo killall VBoxClient <br/>
+```
+sudo killall VBoxClient 
 sudo VBoxClient-all
+```
 
 # Install vs code
+```
 sudo snap install code --classic
+```
 
 # Install pyharm
+```
 sudo snap install pycharm-community --classic
+```
 
 # Install Ansible
+```
 sudo apt-get install ansible -y
 ansible --version
+```
 
 # Install Docker
 ```
