@@ -5,5 +5,5 @@
 2) Pop up window > Run > 
 
 # Copy Paste Error:
-sudo killall VBoxClient 
+sudo killall VBoxClient <br/>
 sudo VBoxClient-all
