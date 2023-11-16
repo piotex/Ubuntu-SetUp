@@ -9,7 +9,7 @@ sudo killall VBoxClient <br/>
 sudo VBoxClient-all
 
 # Install vs code
-sudo apt install ./<file>.deb            <br/>
+"sudo apt install ./<file>.deb"            <br/>
 sudo apt-get install wget gpg            <br/>
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg            <br/>
 sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg            <br/>
