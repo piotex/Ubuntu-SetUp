@@ -3,25 +3,22 @@
 # Guest Tools
 1) Devices > Insert Guest Additions CD image
 2) Pop up window > Run
-3) CD Icon > [Right click on autorun.sh] > Run as software > insert acount pwd 
+3) CD Icon > open in terminal
+4) apt-get update
+5) sudo apt-get install gcc perl make
+6) ./autorun.sh .
 
 # Copy Paste Error:
 sudo killall VBoxClient <br/>
 sudo VBoxClient-all
 
 # Install vs code
-sudo apt install ./\<file\>.deb            <br/>
-sudo apt-get install wget gpg            <br/>
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg            <br/>
-sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg            <br/>
-sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'            <br/>
-rm -f packages.microsoft.gpg            <br/>
-
-sudo apt install apt-transport-https            <br/>
-sudo apt update            <br/>
-sudo apt install code # or code-insiders            <br/>
+sudo snap install code --classic
 
 # Install pyharm
 sudo snap install pycharm-community --classic
 
-# 
+# Install Ansible
+apt-get install ansible
+ansible --version
+
