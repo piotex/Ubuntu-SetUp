@@ -62,3 +62,10 @@ docker-compose --version
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
+# Install audio
+```
+sudo apt install ffmpeg -y
+sudo add-apt-repository universe
+sudo apt install rhythmbox -y
+```
+
