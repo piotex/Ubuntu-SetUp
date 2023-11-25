@@ -68,4 +68,7 @@ sudo apt install ffmpeg -y
 sudo add-apt-repository universe
 sudo apt install rhythmbox -y
 ```
-
+# Install video mp4
+```
+sudo snap install vlc
+```
