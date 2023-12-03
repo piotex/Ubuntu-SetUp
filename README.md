@@ -6,7 +6,7 @@
 3) CD Icon > open in terminal
 ```
 apt-get update
-sudo apt-get install gcc perl make
+sudo apt-get install gcc perl make -y
 ./autorun.sh .
 ```
 
