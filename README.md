@@ -8,6 +8,8 @@
 apt-get update
 sudo apt-get install gcc perl make -y
 ./autorun.sh .
+[autorun.sh > (Rightclick) > Run as program]
+
 ```
 
 # Copy Paste Error:
