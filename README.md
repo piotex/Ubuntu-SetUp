@@ -74,3 +74,7 @@ sudo apt install rhythmbox -y
 ```
 sudo snap install vlc
 ```
+# Install net-tools / ifconfig
+```
+sudo apt install net-tools -y
+```
