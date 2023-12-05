@@ -86,9 +86,10 @@ sudo apt install openjdk-11-jre-headless
 ```
 sudo apt install -y openssh-server
 ```
-# python3 venv
+# python3 
 ```
 sudo apt install -y python3.10-venv
+sudo apt install -y python3-pip
 ```
 # jenkins node ???
 https://www.coachdevops.com/2021/06/jenkins-build-agent-setup-how-to-setup.html
