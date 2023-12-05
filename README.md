@@ -78,3 +78,9 @@ sudo snap install vlc
 ```
 sudo apt install net-tools -y
 ```
+# Instalacja javy
+```
+sudo apt install openjdk-11-jre-headless
+```
+# jenkins node ???
+
