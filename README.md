@@ -82,5 +82,9 @@ sudo apt install net-tools -y
 ```
 sudo apt install openjdk-11-jre-headless
 ```
+# SSH
+```
+sudo apt install -y openssh-server
+```
 # jenkins node ???
 https://www.coachdevops.com/2021/06/jenkins-build-agent-setup-how-to-setup.html
