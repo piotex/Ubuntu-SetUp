@@ -164,7 +164,7 @@ sudo systemctl restart vsftpd
 + install filezilla client
 + 192.168.56.105 + sammy + 21
 
-
+/home/sammy/ftp/files
 
 
 
