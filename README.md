@@ -93,3 +93,101 @@ sudo apt install -y python3-pip
 ```
 # jenkins node ???
 https://www.coachdevops.com/2021/06/jenkins-build-agent-setup-how-to-setup.html
+# ftp
+```
+sudo apt update
+sudo apt install vsftpd
+sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.orig
+sudo ufw status
+sudo ufw allow 20,21,990/tcp
+sudo ufw allow 40000:50000/tcp
+sudo ufw status
+sudo adduser sammy
+
+sudo mkdir /home/sammy/ftp
+sudo chown nobody:nogroup /home/sammy/ftp
+sudo chmod a-w /home/sammy/ftp
+sudo ls -la /home/sammy/ftp
+sudo mkdir /home/sammy/ftp/files
+sudo chown sammy:sammy /home/sammy/ftp/files
+sudo ls -la /home/sammy/ftp
+echo "vsftpd test file" | sudo tee /home/sammy/ftp/files/test.txt
+
+sudo nano /etc/vsftpd.conf
+
+...
+write_enable=YES
+chroot_local_user=YES
+user_sub_token=$USER
+local_root=/home/$USER/ftp
+pasv_min_port=40000
+pasv_max_port=50000
+userlist_enable=YES
+userlist_file=/etc/vsftpd.userlist
+userlist_deny=NO
+...
+
+echo "sammy" | sudo tee -a /etc/vsftpd.userlist
+cat /etc/vsftpd.userlist
+sudo systemctl restart vsftpd
+ftp -p 192.168.56.105
+
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem
+
+Country Name (2 letter code) [AU]:au
+State or Province Name (full name) [Some-State]:some-state
+Locality Name (eg, city) []:city
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:company
+Organizational Unit Name (eg, section) []:section
+Common Name (e.g. server FQDN or YOUR name) []:name
+Email Address []:p@gmail.com
+
+sudo nano /etc/vsftpd.conf
+
+#rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+#rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+#ssl_enable=NO
+rsa_cert_file=/etc/ssl/private/vsftpd.pem
+rsa_private_key_file=/etc/ssl/private/vsftpd.pem
+ssl_enable=YES
+allow_anon_ssl=NO
+force_local_data_ssl=YES
+force_local_logins_ssl=YES
+ssl_tlsv1=YES
+ssl_sslv2=NO
+ssl_sslv3=NO
+require_ssl_reuse=NO
+ssl_ciphers=HIGH
+
+sudo systemctl restart vsftpd
+```
++ install filezilla client
++ 192.168.56.105 + sammy + 21
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
