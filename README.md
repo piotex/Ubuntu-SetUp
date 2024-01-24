@@ -14,6 +14,9 @@ sudo apt-get install gcc perl make -y
 
 # Copy Paste Error:
 ```
+touch copy_paste_error.sh
+chmod +x copy_paste_error.sh
+
 sudo killall VBoxClient 
 sudo VBoxClient-all
 ```
